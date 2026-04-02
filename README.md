@@ -1,48 +1,48 @@
-# rieux_ssh_multiplexing
+# hpc_ssh_multiplexing
 
 [![DOI](https://zenodo.org/badge/1187487539.svg)](https://doi.org/10.5281/zenodo.19139239)
 
-Script de automação para configurar a multiplexação SSH local para usuários macOS e Linux/WSL.
+Automation script to configure local SSH multiplexing for macOS and Linux/WSL users.
 
-## O problema que resolve
-Ao trabalhar com HPC, transferências de dados e conexões interativas frequentes exigem a digitação repetida de senha e token 2FA. Este script configura o cliente SSH para reaproveitar conexões seguras.
+## The Problem it Solves
+When working with High-Performance Computing (HPC), frequent data transfers and interactive connections usually require repeated typing of passwords and 2FA tokens. This script configures your local SSH client to smartly reuse secure connections.
 
-## Funcionalidades
-- Configura regras seguras no `~/.ssh/config`.
-- Mantém um "túnel" SSH ativo em segundo plano por 180 minutos após a primeira autenticação.
-- Elimina prompts repetidos de senha durante rotinas de bioinformática.
+## Features
+- Configures secure rules directly in your `~/.ssh/config`.
+- Keeps an active SSH "tunnel" in the background for 180 minutes after the first successful authentication.
+- Eliminates repeated password prompts during lengthy bioinformatics or data science routines.
 
-## 🛠️ Instalação
+## 🛠️ Installation
 
-Para instalar e usar a ferramenta como um comando nativo do seu sistema, basta clonar o repositório e rodar o nosso script de instalação automatizada. 
+To install and use the tool as a native system command, simply clone the repository and run our automated installation script. 
 
-Você pode baixar em qualquer diretório da sua máquina (como a pasta `Downloads`), pois o instalador cuidará de tudo. Abra seu terminal e rode os comandos abaixo:
+You can download it anywhere on your machine (like the `Downloads` folder), as the installer will handle the rest. Open your terminal and run the commands below:
 
 ```bash
-# 1. Clone o repositório
-git clone [https://github.com/thiagoparentefiocruz/rieux_ssh_multiplexing.git](https://github.com/thiagoparentefiocruz/rieux_ssh_multiplexing.git)
+# 1. Clone the repository
+git clone [https://github.com/thiagoparentefiocruz/hpc_ssh_multiplexing.git](https://github.com/thiagoparentefiocruz/hpc_ssh_multiplexing.git)
 
-# 2. Entre na pasta clonada
-cd rieux_ssh_multiplexing
+# 2. Enter the cloned directory
+cd hpc_ssh_multiplexing
 
-# 3. Execute o instalador
+# 3. Run the installer
 bash install.sh
 ```
 
-*(O script `install.sh` copiará o executável de forma segura para `~/.local/bin` e configurará automaticamente o seu `PATH`, caso seja necessário).*
+*(The `install.sh` script will securely copy the executable to `~/.local/bin` and automatically configure your `PATH` if necessary).*
 
-**Limpeza (Opcional):**
-Como o instalador faz uma cópia real do arquivo, logo após a instalação você pode apagar a pasta que acabou de baixar para manter seu computador organizado:
+**Cleanup (Optional):**
+Since the installer makes a physical copy of the file, you can delete the downloaded folder right after installation to keep your computer organized:
 
 ```bash
 cd ..
-rm -rf rieux_ssh_multiplexing
+rm -rf hpc_ssh_multiplexing
 ```
 
-## 📖 Como Usar
+## 📖 Usage
 
-Após a instalação, a ferramenta estará disponível globalmente em qualquer terminal. Basta digitar o comando abaixo:
+After installation, the tool will be globally available in any terminal. Just type the command below:
 
 ```bash
-rieux_ssh_multiplexing
+hpc_ssh_multiplexing
 ```
